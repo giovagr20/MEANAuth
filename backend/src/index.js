@@ -10,6 +10,7 @@ app.use('/api/',require('./routes/routes.index'));
 
 //middleware
 
+app.use(express.json());
 
 //Run server
 app.listen(app.get('port'), (req,res)=>{
