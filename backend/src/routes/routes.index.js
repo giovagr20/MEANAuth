@@ -9,6 +9,6 @@ router.get('/', (req, res)=> res.send('<h1>Hello world</h1>'));
 router.post('/signup', (req,res)=>{
     console.log(req.body);
     res.send('Register');
-})
+})  
 
 module.exports = router;

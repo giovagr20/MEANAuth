@@ -6,13 +6,12 @@ app.set('port', process.env.PORT || 3000);
 
 require('./database');
 
-app.use('/api/',require('./routes/routes.index'));
+app.use(express.json());
+//app.use(express.urlencoded({extended:false}));
 
+app.use('/api/',require('./routes/routes.index'));
 //middleware
 
-app.use(express.json());
-
 //Run server
-app.listen(app.get('port'), (req,res)=>{
-    console.log(`Server is running on port ${app.get('port')}`);
-})
+app.listen(app.get('port'),
+()=>console.log(`Server is running on port ${app.get('port')}`));
